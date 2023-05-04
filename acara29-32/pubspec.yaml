@@ -1,0 +1,32 @@
+name: fluttify
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=2.19.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Berikut adalah cara untuk menambahkan font Cupertino Icons ke aplikasi Anda.
+  # Gunakan dengan class CupertinoIcons untuk ikon dengan style iOS.
+  cupertino_icons: ^1.0.2
+  get: 4.5.1
+  get_storage: ^2.0.3
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - img/1000iq.gif
+    - img/excuse-me.gif
+    - img/holy-shet.gif
+    - img/noice.gif
+    - img/zootopia.gif
