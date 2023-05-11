@@ -13,7 +13,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  cached_network_image: 2.0.0-rc
+  cached_network_image: ^3.2.3
   http:
 
   # Berikut adalah cara untuk menambahkan font Cupertino Icons ke aplikasi Anda.
@@ -24,9 +24,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets:
-    - img/1000iq.gif
-    - img/excuse-me.gif
-    - img/holy-shet.gif
-    - img/noice.gif
-    - img/zootopia.gif

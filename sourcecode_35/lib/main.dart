@@ -15,6 +15,7 @@ class MoviesApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       home: Home(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -28,7 +29,7 @@ class _HomeState extends State<Home> {
   ApiProvider apiProvider = ApiProvider();
   late Future<PopularMovies> popularMovies;
 
-  String imageBaseUrl = 'https://image.tmdb.org/t/p/w500/';
+  String imageBaseUrl = 'https://image.tmdb.org/t/p/w500';
 
   @override
   void initState() {
@@ -52,7 +53,7 @@ class _HomeState extends State<Home> {
               itemBuilder: (BuildContext context, int index) {
                 return moviesItem(
                   poster:
-                      '$imageBaseUrl${snapshot.data.results[index].posterPath}',
+                      "$imageBaseUrl${snapshot.data.results[index].posterPath}",
                   title: '${snapshot.data.results[index].title}',
                   date: '${snapshot.data.results[index].releaseDate}',
                   voteAverage: '${snapshot.data.results[index].voteAverage}',

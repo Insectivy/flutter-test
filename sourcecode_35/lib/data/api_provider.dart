@@ -12,7 +12,7 @@ class ApiProvider {
     // String url = '$baseUrl/movie/popular?api_key=$apikey';
     // print(url);
     Response response =
-        await client.get('$baseUrl/movie/popular?api_key=$apikey');
+        await client.get(Uri.parse('$baseUrl/movie/popular?api_key=$apikey'));
 
     if (response.statusCode == 200) {
       return PopularMovies.fromJson(jsonDecode(response.body));
