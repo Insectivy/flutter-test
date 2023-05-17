@@ -26,50 +26,42 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 IconButton(icon: Icon(Icons.notifications), onPressed: () {}),
-                IconButton(icon: Icon(Icons.extension), onPressed: () {}),
+                IconButton(icon: Icon(Icons.extension), onPressed: () {})
               ],
             ),
             SizedBox(height: 37),
             Text.rich(
-              TextSpan(
-                children: <TextSpan>[
-                  TextSpan(
-                    text: "Welcome, \n",
-                    style: TextStyle(color: Colors.blue[300]),
-                  ),
-                  TextSpan(
-                    text: auth.currentUser!.email,
-                    style: TextStyle(color: Colors.blue[900]),
-                  ),
-                ],
-              ),
+              TextSpan(children: <TextSpan>[
+                TextSpan(
+                  text: "Welcome, \n",
+                  style: TextStyle(color: Colors.blue[300]),
+                ),
+                TextSpan(
+                  text: auth.currentUser!.email,
+                  style: TextStyle(color: Colors.blue[900]),
+                )
+              ]),
               style: TextStyle(fontSize: 30),
             ),
             SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search, size: 18),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                hintText: "Search",
-              ),
+                  prefixIcon: Icon(Icons.search, size: 18),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: "Search"),
             ),
             SizedBox(height: 10),
             Text(
-              "Recommended Place",
+              "Recommend Place",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
             ),
             Container(
               child: ElevatedButton(
                 onPressed: () {
-                  _signOut().then(
-                    (value) => Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (context) => LoginScreen(),
-                      ),
-                    ),
-                  );
+                  _signOut().then((value) => Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(
+                          builder: (context) => LoginScreen())));
                 },
                 child: Text('Logout'),
               ),
@@ -80,5 +72,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-final countries = ["Tokyo", "Berlin", "Roma", "Monas"];
